@@ -1,0 +1,88 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\title{Summer21_Equations}
+\author{dengelberg2 }
+\date{August 2021}
+
+\begin{document}
+
+\section{Scaling Universal Gravity}
+
+In order to follow the Allen et al. 2020 scaling procedure we need to define a $z$ such that.
+
+
+\begin{equation*}
+z \equiv
+\begin{pmatrix} (x_i)_i \\[8pt] (y_i)_i \end{pmatrix}
+\equiv
+\begin{pmatrix} (p_i^{1 + \psi + \phi} P_i^{-\psi})_i \\[8pt] (P_i^{-\phi})_i \end{pmatrix}
+\end{equation*}
+
+So as to write the general equilibrium gravity model as:
+
+\begin{equation*}
+\begin{pmatrix} (x_i)_i \\[8pt] (y_i)_i \end{pmatrix}
+=
+\begin{pmatrix} \sum_j K_{ij} \bar{c}_i^{-1} \bar{c}_j x_j^{a_{11}} y_j^{a_{12}} \\[8pt] 
+\sum_j K_{ij} x_j^{a_{21}} y_j^{a_{22}}
+\end{pmatrix}
+\end{equation*}
+
+where $A = (A_{ij})_{i,j}$.\\
+
+The objective is then to determine $z$ with similar qualities.
+
+
+
+\section{Scaling Green New PORP}
+
+From equation $(16)$ we know that $P_i$ can be defined 
+
+\begin{equation*}
+P_i = \left( \sum_{k\in \mathbb{N}}  \Psi_k \left(\delta_{ik}^s p_{k}\right)^{1-\sigma} \right)^{\frac{1}{1-\sigma}}
+\end{equation*}
+
+if $\phi = \sigma - 1$ then:
+
+\begin{equation*}
+P_i^{-\phi} = \sum_{k\in \mathbb{N}}  \Psi_k {\delta_{ik}^s}^{-\phi} p_{k}^{-\phi}
+\end{equation*}
+
+So that satisfies $y_i \equiv P_i^{-\phi}$. I then look to the balanced trade condition
+
+\begin{equation*}
+Z_k = \sum_{i\in \mathbb{N}}  X_{ij}
+\end{equation*}
+
+\begin{equation*}
+p_i Y_i = \sum_{i \in \mathbb{N}}  X_{ij}
+\end{equation*}
+
+From equation $(17)$ for trade flows $X_{ik}$
+
+\begin{equation*}
+p_i Y_i = \sum_{i\in \mathbb{N}}  \Psi_k \beta_s W_i \left(\frac{P_i}{\delta_{ik}^s p_k}\right)^{\sigma-1}
+\end{equation*}
+
+This is where I get a little bit lost. According to the Universal Gravity paper:
+
+\begin{equation*}
+    Y_i = a_i n_i \left( \frac{p_i}{P_i} \right)^{(1 - \alpha)/\alpha}
+\end{equation*}
+
+if $psi \equiv (1 - \alpha)/\alpha$ and $\bar{c}_i \equiv a_i n_i$ then....
+
+\begin{equation*}
+\bar{c}_i p_i \left(\frac{p_i}{P_i}\right)^\psi = \sum_{i\in \mathbb{N}}  \Psi_k \beta_s W_i {\delta_{ik}^s}^{-\phi} \left(\frac{P_i}{ p_k}\right)^\phi
+\end{equation*}
+
+so... $y_i = p_i^{1+\psi}P_i^{-\psi}$? Which isn't quite what Allen et al got even though their left side was equivalent.\\
+
+Also, the right side of my question has the price index is $P_i$ instead of $P_j$, making it impossible to deterime the correct $A$ matrix.
+
+
+
+
+\end{document}
